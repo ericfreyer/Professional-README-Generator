@@ -3,7 +3,7 @@ const fs = require("fs");
 const util = require("util");
 const writeFileAsync = util.promisify(fs.writeFile);
 
-userQuestions()
+
 //array of questions to ask
 function userQuestions() {
 
@@ -34,7 +34,8 @@ function userQuestions() {
             message: "Were there any special licenses used for this project?",
             choices: [
                 "[MIT License](LICENSE.txt)", 
-                "[GNU GPLv3 License](COPYING.txt)"
+                "[GNU GPLv3 License](COPYING.txt)",
+                "Mozilla Public License 2.0"
                      ]
         },
         {
@@ -100,7 +101,19 @@ function render(response) {
 
 
 //generate readme
+userQuestions()
+  .then(function(response) {
+    const readme = render(response);
 
+ 
+    return writeFileAsync("README.md", readme);
+  })
+  .then(function() {
+    console.log("Success! Your README.md file has been generated.");
+  })
+  .catch(function(err) {
+    console.log(err);
+  });
 
 //generate markdown
 
