@@ -31,7 +31,11 @@ function userQuestions() {
         {
             type: "checkbox",
             name: "license",
-            message: "Were there any special licenses used for this project?"
+            message: "Were there any special licenses used for this project?",
+            choices: [
+                "[MIT License](LICENSE.txt)", 
+                "[GNU GPLv3 License](COPYING.txt)"
+                     ]
         },
         {
             type: "input",
@@ -63,7 +67,7 @@ function userQuestions() {
 
 //write function for prompts
 function render(response) {
-  return `${response.title}
+  return `${response.title} by ${response.username}
     
 ## Project Description
 * ${response.description}
@@ -75,13 +79,13 @@ function render(response) {
 * ${response.install}
 
 ## Usage Information
-* ${response.use}
+* ${response.usage}
 
 ## Contributors
 * ${response.contribution}
 
 ## Test Instructions
-* ${response.test}.
+* ${response.tests}.
 
 ## License
 * This project is licensed under the ${response.license} License.
@@ -96,7 +100,6 @@ function render(response) {
 
 
 //generate readme
-
 
 
 //generate markdown
