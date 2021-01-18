@@ -104,8 +104,6 @@ function render(response) {
 userQuestions()
   .then(function(response) {
     const render = render(response);
-
- 
     return writeFileAsync("README.md", render);
   })
   .then(function() {
