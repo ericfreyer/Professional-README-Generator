@@ -46,13 +46,50 @@ function userQuestions() {
         {
             type: "input",
             name: "contribution",
-            message: "Are there any contribution rules?"
+            message: "Who contributed to this project?"
         },
+        {
+            type: "input",
+            name: "dependencies",
+            message: "Is there any additional software needed for this application to run?"
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is your email address?"
+        }
     ])}
 
 
 //write function for prompts
+function render(response) {
+  return `${response.title}
+    
+## Project Description
+* ${response.description}
 
+##Dependencies
+* ${response.dependencies}
+
+## Installation Instructions
+* ${response.install}
+
+## Usage Information
+* ${response.use}
+
+## Contributors
+* ${response.contribution}
+
+## Test Instructions
+* ${response.test}.
+
+## License
+* This project is licensed under the ${response.license} License.
+
+## Questions
+* For questions about collaboration, please contact ${response.email}`;
+  
+}
 
 
 
