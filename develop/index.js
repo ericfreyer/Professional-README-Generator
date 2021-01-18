@@ -103,10 +103,10 @@ function render(response) {
 //generate readme
 userQuestions()
   .then(function(response) {
-    const readme = render(response);
+    const render = render(response);
 
  
-    return writeFileAsync("README.md", readme);
+    return writeFileAsync("README.md", render);
   })
   .then(function() {
     console.log("Success! Your README.md file has been generated.");
