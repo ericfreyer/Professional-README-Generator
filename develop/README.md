@@ -12,13 +12,13 @@ Professional README generator created by Eric Freyer
 
 
 ## Project Description
-* For this project I created a program that generates a readme after the user answers a few, simple questions about their project.
+* For the project I created an application that generates a README.md file after the user is prompted with a few, simple questions.
 ## Dependencies
 * Node
 ## Installation Instructions
-* installed inquirer, fs, util, and promisify.
+* I had to install nodes: inquirer, fs, util, and promisify.
 ## Usage Information
-* To generate a README.md file.
+* To automatically generate a README file.
 ## Contributors
 * Eric Freyer
 ## Test Instructions
@@ -27,3 +27,5 @@ Professional README generator created by Eric Freyer
 * This project is licensed under the  license.
 ## Questions
 * For questions about collaboration, please contact ericcfreyer@gmail.com by email or ericfreyer on github.
+
+<iframe src="https://drive.google.com/file/d/1yqEKxnnerYdI6c5B7mnFo1bV4Nh5kAAu/preview" width="640" height="480"></iframe>
