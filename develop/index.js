@@ -72,25 +72,18 @@ function render(response) {
     
 ## Project Description
 * ${response.description}
-
 ##Dependencies
 * ${response.dependencies}
-
 ## Installation Instructions
 * ${response.install}
-
 ## Usage Information
 * ${response.usage}
-
 ## Contributors
 * ${response.contribution}
-
 ## Test Instructions
 * ${response.tests}.
-
 ## License
 * This project is licensed under the ${response.license} License.
-
 ## Questions
 * For questions about collaboration, please contact ${response.email}`;
   
@@ -103,8 +96,10 @@ function render(response) {
 //generate readme
 userQuestions()
   .then(function(response) {
-    const render = render(response);
-    return writeFileAsync("README.md", render);
+    const readme = render(response);
+
+ 
+    return writeFileAsync("README.md", readme);
   })
   .then(function() {
     console.log("Success! Your README.md file has been generated.");
