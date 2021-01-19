@@ -62,17 +62,33 @@ function userQuestions() {
             type: "input",
             name: "email",
             message: "What is your email address?"
+        },
+        {
+            type: "input",
+            name: "name",
+            message: "What is your name?"
         }
     ])}
 
 
 //write function for prompts
 function render(response) {
-  return `${response.title} by ${response.username}
+  return `${response.title} created by ${response.name}
     
+#### Table of Contents
+1. [Project Description](#project-description)
+2. [Dependencies](#dependencies)
+3. [Installation Instructions](#installation-instructions)
+4. [Usage Information](#usage-information)
+5. [Contributors](#contributors)
+6. [Test Instructions](#test-instructions)
+7. [License](#license)
+8. [Questions](#questions)
+
+
 ## Project Description
 * ${response.description}
-##Dependencies
+## Dependencies
 * ${response.dependencies}
 ## Installation Instructions
 * ${response.install}
@@ -83,9 +99,9 @@ function render(response) {
 ## Test Instructions
 * ${response.tests}.
 ## License
-* This project is licensed under the ${response.license} License.
+* This project is licensed under the ${response.license} license.
 ## Questions
-* For questions about collaboration, please contact ${response.email}`;
+* For questions about collaboration, please contact ${response.email} by email or ${response.username} on github.`;
   
 }
 
